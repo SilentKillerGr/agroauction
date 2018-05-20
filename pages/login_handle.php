@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	$_SESSION['user_type'] = 0;
 	//DATABASE CONNECTION
 	$dbserver 		= "localhost";
 	$dbusername 	= "root";
@@ -32,9 +33,12 @@
 	if (password_verify($password, $dbPassword))
 	{
 		echo "The details are correct.";
+		$q2 = "SELECT type FROM users WHERE username = '$username'";
+		$res = mysqli_query($conn, $q2);
+		$ro = mysqli_fetch_assoc($res);
+		$_SESSION['user_type'] = $ro['type'];
 		$_SESSION['loggedin'] = $username;
-		
-		header("Location: ../index.php");
+		//header("Location: ../index.php");
 		die();
 	}
 	else
