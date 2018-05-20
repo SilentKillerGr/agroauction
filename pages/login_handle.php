@@ -1,6 +1,5 @@
 <?php
 	session_start();
-	$_SESSION['user_type'] = 0;
 	//DATABASE CONNECTION
 	$dbserver 		= "localhost";
 	$dbusername 	= "root";

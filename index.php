@@ -10,4 +10,4 @@
 			break;
 	}
     
-	include 'pages/footer.php'; ?>
+	include 'footer.php'; ?>
