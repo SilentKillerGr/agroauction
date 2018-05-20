@@ -1,7 +1,7 @@
 <!-- Login Form -->
 <div id="modal-wrapper" class="modal">
   
-  <form role="form" method="post" class="modal-content animate" action="pages/login_handle.php">
+  <form role="form" method="post" class="modal-content animate" action="login_handle.php">
         
     <div class="imgcontainer">
       <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
@@ -22,7 +22,7 @@
 <!-- Sign Up form -->
 <div id="modal-wrapper-s" class="modal">
   
-  <form role="form" method="post" class="modal-content animate" action="pages/server.php">
+  <form role="form" method="post" class="modal-content animate" action="server.php">
         
     <div class="imgcontainer">
       <span onclick="document.getElementById('modal-wrapper-s').style.display='none'" class="close" title="Close PopUp">&times;</span>
