@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <?php
-	$_SESSION['user_type'] = 0;
 	session_start();
 ?>
 <html>
@@ -34,6 +33,7 @@
 			<nav id="mainav" class="fl_right">
 					<ul class="clear">
 			<?php 
+				if (isset($_SESSION['user_type'])){
 				switch ($_SESSION['user_type'])
 				{
 				  case 1:
@@ -46,6 +46,7 @@
 						</ul>
 					  </li>
 					  <li><a href="profile.php">Προφιλ</a></li>
+						<li><a href="pages/logout.php">Αποσυνδεση</a></li>
 					<?php
 					break;
 					case 2:
@@ -58,6 +59,7 @@
 						</ul>
 					  </li>
 					  <li><a href="profile.php">Προφιλ</a></li>
+						<li><a href="pages/logout.php">Αποσυνδεση</a></li>
 						<?php
 						break;
 				  default:
@@ -71,6 +73,11 @@
 					
 			<?php
 					break;
+				}
+				}else{
+					?>
+						<li class="active"><a href="index.php">Αρχικη</a></li>
+					<?php
 				}
 			?>
 						</ul>
