@@ -3,10 +3,10 @@
 	if(isset($_SESSION['user_type'])){
 		switch($_SESSION['user_type']){
 			case 1:
-				include 'producerprof.php';
+				include 'pages/producerprof.php';
 				break;
 			case 2:
-				include 'sellerprof.php';
+				include 'pages/sellerprof.php';
 				break;
 			default:
 				echo("Παρακαλω συνδεθειτε!");

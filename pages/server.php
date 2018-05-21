@@ -1,10 +1,7 @@
 <?php
 	session_start();
 	//DATABASE CONNECTION
-	$dbserver 		= "localhost";
-	$dbusername 	= "root";
-	$dbpassword 	= "";
-	$db 			= "user";
+	$dbserver 		= "localhost";	$dbusername 	= "id5859464_bkeh97";	$dbpassword 	= "asdewq1234!";	$db 			= "id5859464_user";
 	
 	//CREATE CONNECTION
 	$conn = new mysqli($dbserver, $dbusername, $dbpassword, $db);
