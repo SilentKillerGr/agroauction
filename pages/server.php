@@ -1,7 +1,10 @@
 <?php
 	session_start();
 	//DATABASE CONNECTION
-	$dbserver 		= "localhost";	$dbusername 	= "id5859464_bkeh97";	$dbpassword 	= "asdewq1234!";	$db 			= "id5859464_user";
+	$dbserver 		= "localhost";
+	$dbusername 	= "id5859464_bkeh97";
+	$dbpassword 	= "asdewq1234!";
+	$db 			= "id5859464_user";
 	
 	//CREATE CONNECTION
 	$conn = new mysqli($dbserver, $dbusername, $dbpassword, $db);
@@ -17,6 +20,10 @@
 	$password = $_POST['psw'];
 	$email = $_POST['mail'];
 	$type = $_POST['utype'];
+	$name = $_POST['name'];
+	$surname = $_POST['surn'];
+	$phone = $_POST['phnum'];
+	$addr = $_POST['addr'];
 	
 	//ENCRYPT PASSWORD
 	//$password = md5($password);
@@ -39,8 +46,8 @@
 	else
 	{
 		//INSERT DATA INTO DATABASE
-		$sql = "INSERT INTO users (username, password, email, type)
-		VALUES ('$username', '$password', '$email', '$type')";
+		$sql = "INSERT INTO users (username, password, email, type, name, surname, phone, address)
+		VALUES ('$username', '$password', '$email', '$type', '$name', '$surname', '$phone', '$addr')";
 		
 		//EXECUTE QUERY
 		if($conn->query($sql) === TRUE)
