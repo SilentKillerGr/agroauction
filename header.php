@@ -11,6 +11,9 @@
 		<link href="layout/styles/login.css" rel="stylesheet">
 		<link href="../layout/styles/login.css" rel="stylesheet">
 		<script> var __adobewebfontsappname__="dreamweaver" </script>
+		<link id="callCss" rel="stylesheet" href="../layout/bootstrap.min.css" media="screen"/>
+    	<link href="../layout/css/base.css" rel="stylesheet" media="screen"/>
+		<link href="../layout/scripts/google-code-prettify/prettify.css" rel="stylesheet"/>
 		<script src="http://use.edgefonts.net/montserrat:n4:default;source-sans-pro:n2:default.js" type="text/javascript"></script>
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css">
 	</head>
