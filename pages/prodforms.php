@@ -4,8 +4,7 @@
 	include 'dbconnect.php';
 	//Assign variables
 	$prname = $_POST['prname'];
-	$desc = $_POST['desc'];
-	
+	$desc = $_POST['desc'];+
 	//Check if product is unique
 	$sql = "SELECT name FROM products WHERE name = '$prname'";
 	if($result=mysqli_query($conn,$sql))
@@ -19,18 +18,26 @@
 	}
 	else
 	{
-		$sql = "INSERT INTO products (name, description)
-		VALUES ('$prname', '$desc')";
-		//Execute
-		if($conn->query($sql) === TRUE)
-		{
-			header('location: admin.php');
-			echo "Επιτυχία";
-			die();
+		$image = $_FILES['imge']['name'];
+		// image file directory
+		$target = "../images/products/".basename($image);
+		if (move_uploaded_file($_FILES['imge']['tmp_name'], $target)) {
+			$sql = "INSERT INTO products (name, description, image)
+			VALUES ('$prname', '$desc', '$image')";
+			//Execute
+			if($conn->query($sql) === TRUE)
+			{
+				header('location: admin.php');
+				echo "Επιτυχία";
+				die();
+			}
+			else
+			{
+				echo "Error: ".$sql."<br/>".$conn->error;
+			}
+		}else{
+			$msg = "Failed to upload image";
 		}
-		else
-		{
-			echo "Error: ".$sql."<br/>".$conn->error;
-		}
+		
 	}
 ?>
