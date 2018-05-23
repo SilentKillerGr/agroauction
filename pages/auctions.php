@@ -15,7 +15,7 @@
 				background: white;
 				border: 2px solid black;
 				padding: 20px; 
-    			width: 700px;
+    			width: auto;
     			height: auto;
 				overflow:hidden;
 				white-space:nowrap; 
@@ -40,7 +40,7 @@
 			<?php
 											//Show the product list
 											//TODO: GRID
-											$sql = "SELECT * FROM products";
+											$sql = "SELECT * FROM auction ORDER BY auctionid DESC";
 											$result = $conn->query($sql);
 
 											if ($result->num_rows > 0) {
@@ -50,13 +50,13 @@
 												<li class="prods">
 												
 												  <div>
-													<p style="float: left;"><a href="product_details.html"><img<?php echo " src= ../images/products/".$row['image'];?> style="width:160px;height:160px;" /></a></p>
+													<!--<p style="float: left;"><a href="product_details.html"><img<?php //echo " src= ../images/products/".$row['image'];?> style="width:160px;height:160px;" /></a></p>-->
 													<div>
-													  <h5 style="padding-left: 30%;"><?php echo $row["name"]; ?></h5>
+													  <h5 style="padding-left: 30%;"><?php echo $row["product"]; ?></h5>
 													  <p style="padding-left: 30%;"> 
 														<?php echo $row["description"] ?> 
 													  </p>
-													   <h4 style="text-align:center; padding-top: 5%;"><a class="btn" href="../product_details.html">Πληροφοριες</a> <a class="btn" href="#">Διαγραφη</a></h4>
+													   <h4 style="text-align:center;padding-top: 5%;"><a class="btn" href="product_details.html">Πληροφοριες</a> <a class="btn" href="#">Προσφορα</a> <a class="btn bg-red" href="#">&euro;<?php echo $row['pricest'] ?></a></h4>
 													</div>
 												  </div>
 												</li><br><br>

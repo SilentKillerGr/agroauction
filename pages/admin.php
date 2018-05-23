@@ -6,11 +6,7 @@
 						<h2>Καλωσόρισες, <?php if($_SESSION['loggedin'] == "bkeh97"){echo "Supreme Administrator ";} echo($_SESSION['loggedin']); ?></h2>
 
 						<p>Τί θα κάνουμε σήμερα;</p><br>
-						<a class="btn" href="#">Ενεργες Δημοπρασιες</a>
-						<a class="btn" href="#">Ολοκληρομενες Δημοπρασιες</a><br><br>
-						<a class="btn" onclick="document.getElementById('modal-wrapper').style.display='block'">Εισαγωγη Προϊοντος</a>
-						<a class="btn" href="#">Επεξεργασια προϊοντων</a>
-						<a class="btn" href="#">Εμφανιση Χρηστων</a>
+						
 					</article>
 
 
