@@ -1,7 +1,6 @@
 <?php 
 	session_start();
 	include 'dbconnect.php';
-	$_SESSION['loggedin'] = "bkeh97";
 	$usrname = $_SESSION['loggedin'];
 ?>
 <!-- Modals for actions -->
