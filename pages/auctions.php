@@ -1,5 +1,5 @@
 <?php 
-	include '../header.php';
+	include 'headerp.php';
 	include 'dbconnect.php';
 ?>
 <style>

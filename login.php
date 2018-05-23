@@ -1,5 +1,4 @@
 <!-- Login Form -->
-
 <div id="modal-wrapper" class="modal">
 
   
@@ -67,7 +66,7 @@
 		<input type="text" placeholder="Επώνυμο" name="surn">
 		<input type="text" placeholder="Τηλέφωνο" name="phnum">
 		<input type="text" placeholder="Διεύθυνση" name="addr">
-      	<input type="radio" name="utype" value="1" checked>Παραγωγός
+		<input type="radio" name="utype" value="1" checked>Παραγωγός
       	<input type="radio" name="utype" value="2">Έμπορος        
 		<button type="submit">Εγγραφή</button>
 

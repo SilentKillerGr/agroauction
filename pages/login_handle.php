@@ -23,7 +23,7 @@
 		$ro = mysqli_fetch_assoc($res);
 		$_SESSION['user_type'] = $ro['type'];
 		$_SESSION['loggedin'] = $username;
-		header("Location: ../index.php");
+		header("Location: profile.php");
 		die();
 	}
 	else

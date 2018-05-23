@@ -1,12 +1,12 @@
 <?php 
-	include 'pages/pages/header.php';
+	include 'headerp.php';
 	if(isset($_SESSION['user_type'])){
 		switch($_SESSION['user_type']){
 			case 1:
-				include 'pages/pages/producerprof.php';
+				include 'producerprof.php';
 				break;
 			case 2:
-				include 'pages/pages/sellerprof.php';
+				include 'sellerprof.php';
 				break;
 			default:
 				echo("Παρακαλω συνδεθειτε!");
@@ -21,5 +21,5 @@
 		</div>
 		<?php
 	}
-	include 'pages/footer.php';
+	include '../footer.php';
 ?>

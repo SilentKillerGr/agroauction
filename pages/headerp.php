@@ -17,7 +17,7 @@
 	<!-- ################################################################################################ -->
 	<!-- ################################################################################################ -->
 	<!-- Top Background Image Wrapper -->
-	<div class="row100 bgded" style="background-image:url('images/inuse/01.png');">
+	<div class="row100 bgded" style="background-image:url('../images/inuse/01.png');">
 	  <div class="wrapper row1 overlay"> 
 		<!-- ################################################################################################ -->
 		<!-- ################################################################################################ -->
@@ -35,33 +35,33 @@
 				{
 				  case 1:
 					?>
-						<li class="active"><a href="index.php">Αρχικη</a></li>
+						<li class="active"><a href="../index.php">Αρχικη</a></li>
 					  <li><a class="drop" href="#">Δημοπρασιες</a>
 						<ul>
 						  <li><a href="#">Νέα Δημοπρασία</a></li>
 							<li><a href="#">Οι Δημοπρασίες Μου</a></li>
 						</ul>
 					  </li>
-					  <li><a href="pages/profile.php">Προφιλ</a></li>
-						<li><a href="pages/logout.php">Αποσυνδεση</a></li>
+					  <li><a href="profile.php">Προφιλ</a></li>
+						<li><a href="logout.php">Αποσυνδεση</a></li>
 					<?php
 					break;
 					case 2:
 						?>
-						<li class="active"><a href="index.php">Αρχικη</a></li>
+						<li class="active"><a href="..//index.php">Αρχικη</a></li>
 					  <li><a class="drop" href="#">Δημοπρασιες</a>
 						<ul>
-						  <li><a href="pages/auctions.php">Τρέχουσες Δημοπρασίες</a></li>
+						  <li><a href="auctions.php">Τρέχουσες Δημοπρασίες</a></li>
 						  <li><a href="#">Ιστορικό Δημοπρασιών</a></li>
 						</ul>
 					  </li>
-					  <li><a href="pages/profile.php">Προφιλ</a></li>
-						<li><a href="pages/logout.php">Αποσυνδεση</a></li>
+					  <li><a href="profile.php">Προφιλ</a></li>
+						<li><a href="logout.php">Αποσυνδεση</a></li>
 						<?php
 						break;
 				  default:
 						?>
-						<li class="active"><a href="index.php">Αρχικη</a></li>
+						<li class="active"><a href="../index.php">Αρχικη</a></li>
 						<?php
 						break;
 			?>
@@ -73,7 +73,7 @@
 				}
 				}else{
 					?>
-						<li class="active"><a href="index.php">Αρχικη</a></li>
+						<li class="active"><a href="pages/index.php">Αρχικη</a></li>
 					<?php
 				}
 			?>
