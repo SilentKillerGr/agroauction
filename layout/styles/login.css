@@ -4,7 +4,7 @@
 
 /* Full-width input fields */
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=datetime-local],select {
 
     width: 90%;
 
