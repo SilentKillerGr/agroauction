@@ -45,4 +45,4 @@
 <script src="layout/scripts/jquery.placeholder.min.js"></script>
 </body>
 </html>
-<?php //include 'login.php'; ?>
+<?php include 'login.php'; ?>
