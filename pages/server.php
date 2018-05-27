@@ -1,25 +1,16 @@
 <?php
 	session_start();
-	//DATABASE CONNECTION
-	$dbserver 		= "localhost";
-	$dbusername 	= "root";
-	$dbpassword 	= "";
-	$db 			= "user";
-	
-	//CREATE CONNECTION
-	$conn = new mysqli($dbserver, $dbusername, $dbpassword, $db);
-	
-	//CHECK CONNECTION
-	if ($conn->connect_error)
-	{
-		die("Connection failed: ".$conn->connect_error);
-	}
+	include 'dbconnect.php';
 
 	//ASSIGN VARIABLES FROM FORM
 	$username = $_POST['uname'];
 	$password = $_POST['psw'];
 	$email = $_POST['mail'];
 	$type = $_POST['utype'];
+	$name = $_POST['name'];
+	$surname = $_POST['surn'];
+	$phone = $_POST['phnum'];
+	$addr = $_POST['addr'];
 	
 	//ENCRYPT PASSWORD
 	//$password = md5($password);
@@ -42,8 +33,8 @@
 	else
 	{
 		//INSERT DATA INTO DATABASE
-		$sql = "INSERT INTO users (username, password, email, type)
-		VALUES ('$username', '$password', '$email', '$type')";
+		$sql = "INSERT INTO users (username, password, email, type, name, surname, phone, address)
+		VALUES ('$username', '$password', '$email', '$type', '$name', '$surname', '$phone', '$addr')";
 		
 		//EXECUTE QUERY
 		if($conn->query($sql) === TRUE)
