@@ -44,20 +44,21 @@
     box-sizing: border-box;
 
 	font-size:16px;
-
 }
 </style>
 <!-- Modals for actions -->
 	<!-- Insert Product -->
-	<div id="modal-wrapper" class="modal">
-		<form role="form" method="post" class="modal-content animate" action="prodforms.php" enctype="multipart/form-data">
+	<div id="modal-wrapper-kati" class="modal">
+		<form role="form" method="post" class="modal-content animate" action="auctionform.php" enctype="multipart/form-data">
 		    <div class="imgcontainer">
-				<span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
+				<span onclick="document.getElementById('modal-wrapper-kati').style.display='none'" class="close" title="Close PopUp">&times;</span>
       			<h1 style="text-align:center">Νέα Δημοπρασία</h1>
     		</div>
 		    <div class="container">
 			  	<input type="text" placeholder="Όνομα Δημοπρασιας" name="aucname">
 				<input type="text" placeholder="Δώστε μια σύντομη περιγραφή." name="desc">
+				<input type="text" placeholder="Δώστε την ποσοότητα σε κιλά." name="quant">
+				<input type="text" placeholder="Δώστε την αρχική τιμή." name="mprais">
 				<input type="datetime-local" name="endtime">
 				<select id="drop" name="prod">
 				<?php
@@ -77,7 +78,7 @@
 		</form>
 	</div>
 	<script>
-	var modal = document.getElementById('modal-wrapper');
+	var modal = document.getElementById('modal-wrapper-kati');
 	var modals = document.getElementById('modal-wrapper-s');
 	window.onclick = function(event) {
 		if (event.target == modal) {

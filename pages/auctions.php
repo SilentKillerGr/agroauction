@@ -1,6 +1,7 @@
 <?php 
 	include 'headerp.php';
 	include 'dbconnect.php';
+	include 'bids.php';
 ?>
 <style>
 	h5, p{
@@ -50,13 +51,13 @@
 												<li class="prods">
 												
 												  <div>
-													<!--<p style="float: left;"><a href="product_details.html"><img<?php //echo " src= ../images/products/".$row['image'];?> style="width:160px;height:160px;" /></a></p>-->
+													<p style="float: left;"><a href="product_details.html"><img<?php //echo " src= ../images/products/".$row['image'];?> style="width:160px;height:160px;" /></a></p>
 													<div>
-													  <h5 style="padding-left: 30%;"><?php echo $row["product"]; ?></h5>
+													  <h5 style="padding-left: 30%;"><?php echo $row["prname"]; ?></h5>
 													  <p style="padding-left: 30%;"> 
 														<?php echo $row["description"] ?> 
 													  </p>
-													   <h4 style="text-align:center;padding-top: 5%;"><a class="btn" href="product_details.html">Πληροφοριες</a> <a class="btn" href="#">Προσφορα</a> <a class="btn bg-red" href="#">&euro;<?php echo $row['pricest'] ?></a></h4>
+													   <h4 style="text-align:center;padding-top: 5%;"><a class="btn" href="product_details.html">Πληροφοριες</a> <a class="btn" onclick="document.getElementById('modal-wrapper-kati').style.display='block'">Προσφορα</a> <a class="btn bg-red" href="#"><?php echo $row['pricest'] ?>&euro;</a></h4>
 													</div>
 												  </div>
 												</li><br><br>

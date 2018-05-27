@@ -40,7 +40,7 @@
 						<li class="active"><a href="../index.php">Αρχικη</a></li>
 					  <li><a class="drop" href="#">Δημοπρασιες</a>
 						<ul>
-						  <li><a onclick="document.getElementById('modal-wrapper').style.display='block'">Νέα Δημοπρασία</a></li>
+						  <li><a onclick="document.getElementById('modal-wrapper-kati').style.display='block'">Νέα Δημοπρασία</a></li>
 							<li><a href="#">Οι Δημοπρασίες Μου</a></li>
 						</ul>
 					  </li>
